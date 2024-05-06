@@ -19,13 +19,25 @@
         </header>
         <main>
             <div class="container">
-                <div class="disc-card" v-for="disc in discs">
+                <div class="disc-card" v-for="disc, index in discs" @click="getSingleDisc(index)">
                     <img :src="disc.poster" :alt="disc.title">
                     <div class="text-wrapper">
                         <h4>{{ disc.title }}</h4>
                         <small>{{ disc.author }}</small>
                         <div>{{ disc.year }}</div>
                     </div>
+                </div>
+                <div class="popup" v-show="popupIsVisible">
+                    <div>
+                        <img :src="singleElement.poster" :alt="singleElement.title">
+                        <div class="text-wrapper">
+                            <h4>{{ singleElement.title }}</h4>
+                            <small>{{ singleElement.author }}</small>
+                            <div>{{ singleElement.year }}</div>
+                            <div>{{ singleElement.genre }}</div>
+                        </div>
+                    </div>
+                    <div class="btn-close" @click="clearPopup()">&#10006;</div>
                 </div>
             </div>
         </main>

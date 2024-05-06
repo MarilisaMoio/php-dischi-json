@@ -48,3 +48,26 @@ main{
         margin-bottom: 10px;
     }
 }
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(52, 69, 139, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+        width: 300px;
+    }
+    & .btn-close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
