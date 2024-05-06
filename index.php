@@ -12,7 +12,23 @@
 </head>
 <body>
     <div id="app">
-    
+        <header>
+            <div class="container">
+                <h1>Disc Finder</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="disc-card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                    <div class="text-wrapper">
+                        <h4>Titolo</h4>
+                        <small>Sottotitolo</small>
+                        <div>Date</div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
     <!--js-->
     <script type="text/javascript" src="js/script.js"></script>
