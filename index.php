@@ -19,12 +19,12 @@
         </header>
         <main>
             <div class="container">
-                <div class="disc-card">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                <div class="disc-card" v-for="disc in discs">
+                    <img :src="disc.poster" :alt="disc.title">
                     <div class="text-wrapper">
-                        <h4>Titolo</h4>
-                        <small>Sottotitolo</small>
-                        <div>Date</div>
+                        <h4>{{ disc.title }}</h4>
+                        <small>{{ disc.author }}</small>
+                        <div>{{ disc.year }}</div>
                     </div>
                 </div>
             </div>

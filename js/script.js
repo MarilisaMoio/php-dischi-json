@@ -5,14 +5,15 @@ createApp({
         return {
             param: {
                 discIndex: null
-            }
+            },
+            discs: [],
         };
     },
     methods: {
         getCDFromApi(){
             axios.get("server.php", { params: this.param })
             .then((response) => {
-                console.log(response)
+                this.discs = response.data;
             })
         }
     },
